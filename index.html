@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <h1 class="main">Movie Profile!</h1>
+        <div class="search-container">
+             <input type="text" id="moviename" onchange="fetchMovieDetails()"  placeholder="Enter the Movie Name">  
+            <button class="btn" onclick="fetchMovieDetails()">Submit</button>
+        </div>
+    </section>
+    <section>
+        <div class="intro" id="intro">
+            <h1>Want to know <span class="highlight">full Details of the movie?</span></h1>
+        </div>
+    </section>
+    <div id="loader"></div>
+    <section>
+        <div class="movie-container" id="movieContainer" >
+            <div class="movie-img-container">
+                <img id="img" class="movie-img" src="https://m.media-amazon.com/images/M/MV5BNjQyNGI5OWEtZjI1Yy00NDVjLWE4MTAtMzRlNzU1NzM2OGVkXkEyXkFqcGdeQXVyMTA1NzEzOTU1._V1_SX300.jpg"
+                alt="">
+                <p class="ratings">IMDB: <span id="ratings" ></span></p>
+            </div>
+            <div class="content">
+                <h1 id="title"><span >Kantara</span></h1>
+                <h1>Year: <span id="Year"></span></h1>
+                <h2>Released: <span id="Released"></span></h2>
+                <p id="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor accusantium autem nemo.</p>
+                <p>Actors: <span id="actors"></span></p>
+                <p>Awards: <span id="Awards"></span></p>
+                <p>Genre: <span id="Genre"> </span> </p>
+                <p>iMDBVotes: <span id="imdbvotes"></span></p>
+                <p>BoxOffice: <span id="collection"  ></span></p>
+            </div>
+            <!-- <div class="movie-img-container">
+                <img id="img" class="movie-img" src="https://m.media-amazon.com/images/M/MV5BNjQyNGI5OWEtZjI1Yy00NDVjLWE4MTAtMzRlNzU1NzM2OGVkXkEyXkFqcGdeQXVyMTA1NzEzOTU1._V1_SX300.jpg"
+                alt="">
+                <p class="ratings">IMDB: <span id="ratings" ></span></p>
+            </div> -->
+        </div>
+        <div class="error-conatiner" id="errorContainer">
+            <img class="error-img" src="errorimage.jpg" height="230px" width="230px" alt="">
+            <h1 class="highlight">Movie not found!</h2>
+            <h3>Check an another movie.</h3>
+        </div>
+    </section>
+    <script src="./app.js"></script>
+</body>
+
+</html>
